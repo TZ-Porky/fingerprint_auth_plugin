@@ -14,7 +14,7 @@ Ajoutez le plugin à votre fichier `pubspec.yaml` :
 
 ```yaml
 dependencies:
-  fingerprint_auth: ^0.0.2
+  fingerprint_auth: ^0.0.3
 ```
 
 ---
@@ -35,4 +35,4 @@ Add the plugin to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  fingerprint_auth: ^0.0.2
+  fingerprint_auth: ^0.0.3
