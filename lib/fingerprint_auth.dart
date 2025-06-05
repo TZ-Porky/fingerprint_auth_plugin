@@ -21,26 +21,29 @@ class FingerprintAuth {
   /// Returns `true` if authentication is successful, `false` if it fails (e.g., wrong fingerprint),
   /// or throws a [PlatformException] if an unrecoverable error occurs (e.g., too many attempts, no hardware).
   static Future<bool> authenticate({
-    String title = 'Authentication Required',
-    String subtitle = 'Verify your identity to proceed',
-    String negativeButtonText = 'Use Password',
-  }) async {
-    try {
-      final bool? success = await _channel.invokeMethod<bool>(
-        'authenticate',
-        <String, dynamic>{
-          'title': title,
-          'subtitle': subtitle,
-          'negativeButtonText': negativeButtonText,
-        },
-      );
-      return success ?? false;
-    } on PlatformException catch (e) {
-      // Handle specific authentication errors if needed
-      // print("Authentication error: ${e.code} - ${e.message}");
-      rethrow; // Re-throw the exception for the calling app to handle
-    }
+  String title = 'Authentication Required',
+  String subtitle = 'Verify your identity to proceed',
+  String negativeButtonText = 'Use Password',
+}) async {
+  try {
+    final bool? success = await _channel.invokeMethod<bool>(
+      'authenticate',
+      <String, dynamic>{
+        'title': title,
+        'subtitle': subtitle,
+        'negativeButtonText': negativeButtonText,
+      },
+    );
+    return success ?? false;
+  } on PlatformException catch (e) { // <-- L'exception 'e' est maintenant utilisée
+    // Ici, on ré-lance l'exception pour qu'elle puisse être traitée par l'appelant
+    // C'est ce que votre code fait déjà, donc l'avertissement est bizarre si vous n'avez pas de 'print'
+    // Mais si vous avez un 'print' commenté, le linter peut le voir comme inutilisé
+    // Décommenter ou ajouter un print pour montrer l'utilisation
+    print("Authentication error in plugin: ${e.code} - ${e.message}"); // Exemple d'utilisation
+    rethrow; // Re-throw the exception for the calling app to handle
   }
+}
 
   /// Checks if the plugin is fully attached to an Android Activity and ready to show UI.
   static Future<bool> isActivityAttached() async {
