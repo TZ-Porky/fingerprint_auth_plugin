@@ -1,7 +1,7 @@
 name: fingerprint_auth
 description: "A new Flutter plugin project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/TZ-Porky/fingerprint_auth_plugin.git
 
 environment:
   sdk: ^3.7.2
