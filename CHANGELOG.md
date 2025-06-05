@@ -1,3 +1,8 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Ajout de l'authentification avec empreinte digitale
+
+## 0.0.2
+
+* Correction des bugs de l'authentification avec empreinte digitale
+* Optimisation du code 
