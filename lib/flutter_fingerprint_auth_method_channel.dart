@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'fingerprint_auth_platform_interface.dart';
+import 'flutter_fingerprint_auth_platform_interface.dart';
 
 /// An implementation of [FingerprintAuthPlatform] that uses method channels.
 class MethodChannelFingerprintAuth extends FingerprintAuthPlatform {

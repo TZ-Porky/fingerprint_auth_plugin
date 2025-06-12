@@ -1,7 +1,7 @@
-name: fingerprint_auth
+name: flutter_fingerprint_auth
 description: "Fingerprint Auth is a Flutter plugin that enables fingerprint recognition and authentication using the device's fingerprint sensor."
-version: 0.0.3
-homepage: https://github.com/TZ-Porky/fingerprint_auth_plugin.git
+version: 1.0.0
+homepage: https://github.com/TZ-Porky/flutter_fingerprint_auth.git
 
 environment:
   sdk: ^3.7.2
@@ -35,10 +35,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.fingerprint_auth
-        pluginClass: FingerprintAuthPlugin
+        package: com.example.flutter_fingerprint_auth
+        pluginClass: FlutterFingerprintAuth
       ios:
-        pluginClass: FingerprintAuthPlugin
+        pluginClass: FlutterFingerprintAuth
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

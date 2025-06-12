@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'package:flutter_fingerprint_auth/flutter_fingerprint_auth_platform_interface.dart';
 
 class FingerprintAuth {
   static const MethodChannel _channel =
@@ -49,5 +50,9 @@ class FingerprintAuth {
   static Future<bool> isActivityAttached() async {
     final bool? result = await _channel.invokeMethod<bool>('isActivityAttached');
     return result ?? false;
+  }
+
+  Future<String?> getPlatformVersion() {
+    return FingerprintAuthPlatform.instance.getPlatformVersion();
   }
 }

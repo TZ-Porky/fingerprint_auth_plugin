@@ -1,6 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'fingerprint_auth_method_channel.dart';
+import 'flutter_fingerprint_auth_method_channel.dart';
 
 abstract class FingerprintAuthPlatform extends PlatformInterface {
   /// Constructs a FingerprintAuthPlatform.
