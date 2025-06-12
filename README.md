@@ -1,4 +1,4 @@
-# Fingerprint Auth Plugin
+# Flutter Fingerprint Auth
 
 Plugin Flutter permettant la reconnaissance et l'authentification des empreintes digitales à l'aide du capteur d'empreintes digitales du téléphone.
 
@@ -14,12 +14,12 @@ Ajoutez le plugin à votre fichier `pubspec.yaml` :
 
 ```yaml
 dependencies:
-  fingerprint_auth: ^0.0.3
+  flutter_fingerprint_auth: ^1.0.0
 ```
 
 ---
 
-# Fingerprint Auth Plugin
+# Flutter Fingerprint Auth
 
 Fingerprint Auth is a Flutter plugin that enables fingerprint recognition and authentication using the device's fingerprint sensor.
 
@@ -35,4 +35,4 @@ Add the plugin to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  fingerprint_auth: ^0.0.3
+  flutter_fingerprint_auth: ^1.0.0
