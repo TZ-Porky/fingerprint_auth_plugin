@@ -13,3 +13,7 @@
 * Amélioration de la compatibilité avec les anciennes versions d'Android
 * Refactorisation du code pour une meilleure lisibilité
 * Mise à jour des dépendances Flutter
+
+## 1.0.1
+
+* Correction du bug de la classe Main
